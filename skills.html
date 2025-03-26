@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - John Dalisay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+        color: #fff;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 250px;
+        background: rgba(20, 20, 20, 0.9);
+        padding: 20px;
+        position: fixed;
+        height: 100vh;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .sidebar h2, h3 {
+        text-align: center;
+        color: #00bcd4;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+        background: rgba(0, 188, 212, 0.2);
+    }
+
+    /* Main Content */
+    main {
+        margin-left: 270px;
+        padding: 40px;
+        flex: 1;
+    }
+
+    h2 {
+        color: #00bcd4;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        body {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+            text-align: center;
+        }
+        main {
+            margin-left: 0;
+            padding: 20px;
+        }
+        .sidebar ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+    }
+
+</style>
+
+<body>
+    <nav class="sidebar">
+        <img src="images/prof-pic.jpg" alt="Profile Picture" class="profile-pic">
+        <h2>John Dalisay</h2>
+        <h3>Web Developer</h3>
+        <ul>
+            <li><a href="portfolio.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <p>Here are some of the skills I've developed so far:</p>
+            <ul>
+                <li>Networking</li>
+                <li>Basic Python</li>
+                <li>Computer System Servicing</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
