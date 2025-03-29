@@ -56,22 +56,28 @@
     }
 
     .navbar ul li a {
-        color: #fff;
+        color: #00bcd4;
         text-decoration: none;
         font-size: 16px;
         padding: 5px 10px;
         border-radius: 5px;
-        transition: background .3s, color 0.3s; /* Smooth transition for hover effects */
+        transition: background .3s, color 0.3s; 
     }
 
     .navbar ul li a:hover {
-        background: rgba(0, 188, 212, 0.2); /* Add a background color on hover */
-        color: #00bcd4; /* Change text color on hover */
+        background: rgba(0, 188, 212, 0.2); 
+        color: #00bcd4; 
     }
 
     main {
-        margin-top: 80px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
         padding: 40px;
+        min-height: calc(100vh - 80px);
+        text-align: center;
     }
 
     
@@ -85,6 +91,15 @@
         height: auto; 
         border-radius: 10px;
     }
+
+    #home img[alt="Dals"] {
+        width: 400px; 
+        height: 400px; 
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        margin-bottom: 20px;
+    }    
 
     h2 {
         color: #00bcd4;
@@ -107,9 +122,9 @@
     }
 
     .gallery {
-        display: flex; /* Use Flexbox for centering */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
         padding: 20px;;
     }
 
@@ -150,10 +165,10 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex; /* Use Flexbox to align items in one line */
-        justify-content: center; /* Center the items horizontally */
-        gap: 20px; /* Add spacing between items */
-        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
+        flex-wrap: wrap;
     }
 
     footer ul li {
@@ -169,7 +184,7 @@
     footer ul li a {
         color: #00bcd4;
         text-decoration: none;
-        word-break: break-word; /* Ensure long links break properly */
+        word-break: break-word;
     }
 
     footer ul li a:hover {
@@ -177,21 +192,37 @@
     }
 
     @media (max-width: 480px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar ul {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar ul li {
+            margin: 5px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
         footer ul {
-            flex-direction: column; /* Stack items vertically on small screens */
-            gap: 10px; /* Reduce spacing between items */
+            flex-direction: column;
+            gap: 10px; 
         }
     }
     
     @media (max-width: 768px) {
         .gallery {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
         }
     }
 
     @media (max-width: 480px) {
         .gallery {
-            grid-template-columns: 1fr; /* Stack images in one column on very small screens */
+            grid-template-columns: 1fr; 
         }
     }
 
@@ -232,12 +263,12 @@
 
     <main>
         <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hi there! I'm John Dalisay, a 20-year-old IT student passionate about web development.</p>
+            <img src="images/prof-pic.jpg" alt="Dals" width="400" height="400">
+            <h2>John Dalisay</h2>
             <img src="images/future-webdesign.jpg" alt="Future Web Design" width="1200" height="700">
         </section>
         <section id="gallery">
-            <h2>Gallery</h2>
+            <h2>Project</h2>
             <p>Here are some of my favorite projects and designs:</p>
             <div class="gallery">
                 <div class="gallery-item">
@@ -257,3 +288,4 @@
         <p>© 2025 HANJI. All rights reserved.</p>
     </footer>
 </body>
+</html>
