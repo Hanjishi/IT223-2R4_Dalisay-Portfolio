@@ -9,11 +9,12 @@
 
 <style>
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Poppins', Arial, sans-serif;
         margin: 0;
         padding: 0;
         background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
         color: #fff;
+        transition: background 0.5s, color 0.5s;
     }
 
     .navbar {
@@ -185,6 +186,58 @@
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0, 255, 100, 0.4);
     }
+
+    #contact {
+        text-align: center;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        margin-top: 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #contact h2 {
+        color: #00bcd4;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    label {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        background: #2c2c2c;
+        color: white;
+    }
+
+    button {
+        margin-top: 15px;
+        background: #00bcd4;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background: #008ba3;
+    }
+
     footer {
         background: rgba(20, 20, 20, 0.9);
         color: #fff;
@@ -322,6 +375,22 @@
                 <img src="images/cpic.JPG" alt="Pic 5">
                 <img src="images/snake.jpg" alt="Pic 6">
             </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to send me a message!</p>
+            <form action="mailto:dalisay.john06@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+        
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
     <footer>
