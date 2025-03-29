@@ -7,7 +7,6 @@
 </head>
 
 <style>
-    /* General Styles */
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -16,7 +15,7 @@
         color: #fff;
     }
 
-    /* Top Navigation Bar */
+   
     .navbar {
         width: 100%;
         background: rgba(20, 20, 20, 0.9);
@@ -69,14 +68,115 @@
         background: rgba(0, 188, 212, 0.2);
     }
 
-    /* Main Content */
     main {
-        margin-top: 80px; /* Adjust for fixed navbar height */
+        margin-top: 80px; 
         padding: 40px;
+    }
+
+    
+    #home {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #home img {
+        max-width: 100%;
+        height: auto; 
+        border-radius: 10px;
     }
 
     h2 {
         color: #00bcd4;
+    }
+
+    
+    #gallery {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    #gallery h2 {
+        color: #00bcd4;
+        margin-bottom: 20px;
+    }
+
+    #gallery p {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+        background: rgba(20, 20, 20, 0.9);
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    footer ul li {
+        margin: 0;
+    }
+
+    footer ul li a {
+        color: #00bcd4;
+        text-decoration: none;
+    }
+
+    footer ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+        #home {
+            padding: 10px;
+        }
+
+        #home h2 {
+            font-size: 24px; 
+        }
+
+        #home p {
+            font-size: 16px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        #home h2 {
+            font-size: 20px; 
+        }
+
+        #home p {
+            font-size: 14px; 
+        }
     }
 </style>
 
@@ -87,7 +187,6 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
-            <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -96,7 +195,24 @@
         <section id="home">
             <h2>Welcome to My Portfolio</h2>
             <p>Hi there! I'm John Dalisay, a 20-year-old IT student passionate about web development.</p>
-            <img src="images/future-webdesign.jpg" alt="Future Web Design" width="800" height="500">
+            <img src="images/future-webdesign.jpg" alt="Future Web Design" width="1200" height="700">
         </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Here are some of my favorite projects and designs:</p>
+            <div class="gallery">
+                <img src="images/proj1.png" alt="Project 1">
+                <img src="images/project2.jpg" alt="Project 2">
+                <img src="images/project3.jpg" alt="Project 3">
+            </div>
+        </section>
+        
     </main>
+    <footer>
+        <ul>
+            <li>Email: dalisay.john06@gmail.com</li>
+            <li>LinkedIn: <a href="#">https://www.facebook.com/Hanjiasahi</a></li>
+            <li>GitHub: <a href="#">https://github.com/Hanjishi</a></li>
+        </ul>
+    </footer>
 </body>
