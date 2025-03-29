@@ -12,99 +12,80 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        display: flex;
         background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
         color: #fff;
     }
 
-    /* Sidebar Navigation */
-    .sidebar {
-        width: 250px;
+    /* Top Navigation Bar */
+    .navbar {
+        width: 100%;
         background: rgba(20, 20, 20, 0.9);
-        padding: 20px;
+        padding: 10px 20px;
         position: fixed;
-        height: 100vh;
-        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
     }
 
-    .profile-pic {
-        width: 100px;
-        height: 100px;
+    .navbar .profile-pic {
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        display: block;
-        margin: 0 auto;
+        margin-right: 15px;
     }
 
-
-    .sidebar h2, h3 {
-        text-align: center;
+    .navbar h2 {
         color: #00bcd4;
+        margin: 0;
+        margin-right: auto;
+        font-size: 20px;
     }
 
-    .sidebar ul {
+    .navbar ul {
         list-style: none;
-        padding: 0;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        text-align: center;
     }
 
-    .sidebar ul li {
-        margin: 20px 0;
+    .navbar ul li {
+        margin: 0 10px;
     }
 
-    .sidebar ul li a {
+    .navbar ul li a {
         color: #fff;
         text-decoration: none;
-        font-size: 18px;
-        display: block;
-        padding: 10px;
+        font-size: 16px;
+        padding: 5px 10px;
         border-radius: 5px;
         transition: background 0.3s;
     }
 
-    .sidebar ul li a:hover {
+    .navbar ul li a:hover {
         background: rgba(0, 188, 212, 0.2);
     }
 
     /* Main Content */
     main {
-        margin-left: 270px;
+        margin-top: 80px; /* Adjust for fixed navbar height */
         padding: 40px;
-        flex: 1;
     }
 
     h2 {
         color: #00bcd4;
     }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-        body {
-            flex-direction: column;
-        }
-        .sidebar {
-            width: 100%;
-            height: auto;
-            position: relative;
-            text-align: center;
-        }
-        main {
-            margin-left: 0;
-            padding: 20px;
-        }
-        .sidebar ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-    }
-
 </style>
 
 <body>
-    <nav class="sidebar">
+    <nav class="navbar">
         <img src="images/prof-pic.jpg" alt="Profile Picture" class="profile-pic">
         <h2>John Dalisay</h2>
-        <h3>Web Developer</h3>
         <ul>
-            <li><a href="portfolio.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="skills.html">Skills</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -119,4 +100,3 @@
         </section>
     </main>
 </body>
-</html>
